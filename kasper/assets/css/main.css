@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "IBM Plex Sans Arabic";
-  src: url(/assets/webfonts/ibm-plex-sans-arabic.ttf);
+  font-family: "Work Sans";
+  src: url(../webfonts/worksans-variablefont_wght.ttf);
 }
 
 * {
@@ -12,8 +12,12 @@
 }
 
 html {
-  font-family: "IBM Plex Sans Arabic";
+  font-family: "Work Sans";
   font-size: 10px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .flex {
@@ -27,4 +31,114 @@ html {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* header */
+
+.header {
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.header .container {
+  padding: 0;
+  margin: 0 20px;
+  justify-content: space-between;
+  border-bottom: 2px solid #f4f4f4;
+}
+
+.header .navbar {
+  font-size: 1.6rem;
+  color: #f4f4f4;
+  gap: 20px;
+}
+
+.header .navbar ul {
+  list-style: none;
+  gap: 20px;
+}
+
+.header .navbar ul li {
+  height: 70px;
+  position: relative;
+}
+
+.header .navbar ul li::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: 0.3s background ease-in-out;
+}
+
+.header .navbar ul li:nth-child(1)::after {
+  background-color: #00c8f4;
+}
+
+.header .navbar ul li a {
+  color: #f4f4f4;
+  transition: 0.3s color ease-in-out;
+}
+
+.header .navbar ul li:nth-child(1) a {
+  color: #00c8f4;
+}
+
+.header .navbar ul li:hover::after {
+  background-color: #00c8f4;
+}
+
+.header .navbar ul li:hover a {
+  color: #00c8f4;
+}
+
+.header .navbar i {
+  font-size: 2rem;
+  height: 30px;
+  margin-left: 20px;
+  position: relative;
+}
+
+.header .navbar i::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  top: 0;
+  left: -20px;
+  background-color: #f4f4f4;
+}
+
+/* hero */
+
+.hero {
+  width: 100%;
+  height: 100svh;
+  background-image: url(../images/landing.jpg);
+  /* background-position: center; */
+  background-size: cover;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #041322;
+  opacity: 0.6;
+}
+
+.hero .slider {
+  position: absolute;
+  top: 50%;
+  left: 0;
 }
